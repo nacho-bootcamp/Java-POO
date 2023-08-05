@@ -1,36 +1,37 @@
 // public class CrearCuenta {
-//   public static void main(String[] args) {
-//     Cuenta primeraCuenta = new Cuenta();
-//     primeraCuenta.saldo = 1000;
-//     System.out.println(primeraCuenta.saldo);
-//   }
+// public static void main(String[] args) {
+// Cuenta primeraCuenta = new Cuenta();
+// primeraCuenta.saldo = 1000;
+// System.out.println(primeraCuenta.saldo);
+// }
 // }
 
+// ========================================>
 public class CrearCuenta {
 
   public static void main(String[] args) {
 
     Cuenta primeraCuenta = new Cuenta();
-    primeraCuenta.saldo = 200;
-    System.out.println(primeraCuenta.saldo);
+    primeraCuenta.setSaldo(200);
+    System.out.println(primeraCuenta.getSaldo());
 
-    primeraCuenta.saldo += 100;
-    System.out.println(primeraCuenta.saldo);
+    primeraCuenta.setSaldo(primeraCuenta.getSaldo() + 100);
+    System.out.println(primeraCuenta.getSaldo());
 
     Cuenta segundaCuenta = primeraCuenta;
-    segundaCuenta.saldo = 50;
+    segundaCuenta.setSaldo(50);
 
-    System.out.println("primera cuenta tiene " + primeraCuenta.saldo);
-    System.out.println("segunda cuenta tiene " + segundaCuenta.saldo);
+    System.out.println("primera cuenta tiene " + primeraCuenta.getSaldo());
+    System.out.println("segunda cuenta tiene " + segundaCuenta.getSaldo());
 
     Cuenta cuentaDeEri = new Cuenta();
     cuentaDeEri.depositar(1000);
-    System.out.println(cuentaDeEri.saldo);
+    System.out.println(cuentaDeEri.getSaldo());
 
     cuentaDeEri.transferir(400, primeraCuenta);
 
-    System.out.println(cuentaDeEri.saldo);
-    System.out.println(primeraCuenta.saldo);
+    System.out.println(cuentaDeEri.getSaldo());
+    System.out.println(primeraCuenta.getSaldo());
 
   }
 }
