@@ -5,6 +5,23 @@ class Cuenta {
   int numero;
   crearUsuario titular;
 
+  // La propiedad "static" lo que nos va a decir es que esta variable no va a ser
+  // de la instancia. Esta variable va a ser de la clase. la palabra static nos
+  // está diciendo que esta variable que está aquí no va a ser alterada por la
+  // instancia sino directamente por nuestra clase cuenta.por Ejemplo:
+  private static int total = 0;
+
+  // Este es el contructor el cual nos permite poder manejar a la clase
+  // desde su concepcion
+  // public Cuenta(int agencia) {
+  // if (agencia <= 0) {
+  // this.agencia = 1;
+  // System.out.println("No se permite el numero 0");
+  // } else {
+  // this.agencia = agencia;
+  // }
+  // }
+
   public void depositar(double valor) {
     this.saldo1 += valor;
   }
@@ -54,6 +71,11 @@ class Cuenta {
   public int getAgencia() {
     return agencia;
   }
+
+}
+
+public int getTotal(){
+  return Cuenta.total;
 }
 
 // la funcion set es la que tiene el parametro l otro solo devuenve
