@@ -72,10 +72,12 @@ class Cuenta {
     return agencia;
   }
 
-}
-
-public int getTotal(){
-  return Cuenta.total;
+  // metodo static para poder usarlo en las instancia de la cuenta y se usa de la
+  // siguiente manera.
+  // Cuenta.getTotal();
+  public static int getTotal() {
+    return Cuenta.total;
+  }
 }
 
 // la funcion set es la que tiene el parametro l otro solo devuenve
